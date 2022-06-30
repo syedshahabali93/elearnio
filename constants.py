@@ -1,5 +1,3 @@
-# chromeUserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/84.0.4147.105 Safari/537.36"
-# chromeUserAgent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4298.4 Safari/537.36"
 base_url = "https://dev.elearnio.net/"
 username = "qasim+loadtest@elearnio.com"
 password = "Elearnio@2022"

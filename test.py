@@ -2,11 +2,11 @@ from base import *
 from locators import *
 from constants import *
 
-print("In test.py")
+
 try:
     launch_browser()
     load_url(base_url)
-    capture_screenshot("/tmp/results/browser-login-page.PNG")
+    capture_screenshot("browser-login-page.PNG")
     wait_and_find_element(login_email_input)
     wait_and_enter_text(login_email_input, username)
     wait_and_find_element(login_password_input)
@@ -14,7 +14,7 @@ try:
     wait_and_find_element(login_button)
     wait_and_click("login_button", login_button)
     wait_and_find_element(my_trainings_show_all_button)
-    capture_screenshot("/tmp/results/browser-home-page.PNG")
+    capture_screenshot("browser-home-page.PNG")
     wait_and_click("my_trainings_show_all_button", my_trainings_show_all_button)
     wait_and_find_element(course_status_dropdown)
     wait_and_click("course_status_dropdown", course_status_dropdown)
@@ -27,7 +27,7 @@ try:
     wait_for_element_invisible(loading_spinner)
     wait_and_find_element(interactive_video_start_button)
     wait_and_click("interactive_video_start_button", interactive_video_start_button)
-    capture_screenshot("/tmp/results/browser-video-page.PNG")
+    capture_screenshot("browser-video-page.PNG")
 
     wait_and_find_element(video_play_button1)
     wait_and_click("video_play_button1", video_play_button1)
@@ -38,13 +38,13 @@ try:
     print("Video playback started from beginning")
     time.sleep(1)
 
-    while (is_element_present(video_play_button2)):
-        print("Video playback is in progress")
-        time.sleep(30)
-    else:
-        print("Video playback has finished")
+    # while (is_element_present(video_play_button2)):
+    #     print("Video playback is in progress")
+    #     time.sleep(30)
+    # else:
+    #     print("Video playback has finished")
 
-    capture_screenshot("/tmp/results/browser-video-ended.PNG")
+    capture_screenshot("browser-video-ended.PNG")
     close_browser()
 
 
@@ -53,7 +53,7 @@ except Exception as e:
     exeMsg=type(e).__name__ + " : " + str(e)
     print(e)
     print(exeMsg)
-    capture_screenshot("/tmp/results/exception_screenshot.PNG")
+    capture_screenshot("ss1.PNG")
 #    close_browser()
     raise e
 
